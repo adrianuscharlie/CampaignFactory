@@ -1,6 +1,6 @@
 //SPDX-License-Identifier:MIT
 
-pragma solidity ^0.4.16;
+pragma solidity 0.8.19;
 
 contract Campaign {
     address public manager;
@@ -64,6 +64,19 @@ contract Campaign {
         require(request.approvalCount > approversCount / 2);
         request.recipient.transfer(request.value);
         request.complete = true;
+    }
+    function getSummary() public view returns (uint, uint, uint, address) {
+        return (
+            minimumContribution,
+            this.balance,
+            requests.length,
+            approversCount,
+            manager
+        );
+    }
+
+    function getRequestCount() public view returns (uint) {
+        return requests.length;
     }
 }
 
