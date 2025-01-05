@@ -64,8 +64,15 @@ The **Campaign Factory** project is a decentralized application (dApp) designed 
 
 
 ## 📸 Screenshots  
-*(Include screenshots of the UI, key workflows, and examples if applicable.)*  
+![image](https://github.com/user-attachments/assets/7d4a6ec6-af53-4837-8a10-8cdce54562a6)
+![image](https://github.com/user-attachments/assets/12b715d0-1403-4626-beee-8b217e09441d)
+![image](https://github.com/user-attachments/assets/1a3b0e57-cbe2-4304-9721-d0421862a5ac)
+![image](https://github.com/user-attachments/assets/cc29df97-21b8-4b38-8626-e2f30ba005f3)
+![image](https://github.com/user-attachments/assets/8f4247a9-87e9-4075-a894-42e96902ac60)
+![image](https://github.com/user-attachments/assets/5b557572-6156-4f4b-b6bc-16a214aa877e)
+![image](https://github.com/user-attachments/assets/b7c9ac2b-c7b9-4ba5-aed0-0a8458606a28)
+![image](https://github.com/user-attachments/assets/05be6d0f-e88b-420c-a95a-c985afe62c93)
+
 
 --- 
 
-Feel free to modify this template to match the specifics of your project!
