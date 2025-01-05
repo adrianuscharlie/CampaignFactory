@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Campaign Factory Web3 Project
 
-## Getting Started
+## 🚀 Project Overview  
+The **Campaign Factory** project is a decentralized application (dApp) designed to allow users to create, manage, and interact with crowdfunding campaigns on the Ethereum blockchain. It utilizes smart contracts to ensure transparency, security, and trust in the fundraising process.  
 
-First, run the development server:
+## 🛠️ Features  
+- **Create Campaigns**: Users can create new crowdfunding campaigns with an initial minimum contribution amount. The user are known as manager for that campaign.
+- **Contribute to Campaigns**: Other user can contribute funds to a campaign securely.  
+- **Request Management**: Campaign managers can create spending requests and submit them for contributor approval.  
+- **Approval Mechanism**: Contributors can approve or reject spending requests to ensure the campaign funds are spent as intended.  
+- **Finalize**: Sending the balance from that campaign into the recipient address.  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 Project Structure  
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Ethereum  
+- **`CampaignFactory.sol`**: A factory contract that creates and tracks individual campaigns.  
+- **`Campaign.sol`**: The smart contract for individual campaigns, enabling contributors to donate and manage requests.  
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Frontend  
+- Built with **Next.js** to provide a seamless and responsive user interface.  
+- Integration with MetaMask for wallet connection.  
 
-## Learn More
+### Backend  
+- **Web3.js** is used for interaction with the Ethereum blockchain.  
+- Deployed on the **Ganache** local blockchain during development.  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧩 Prerequisites  
+1. Node.js (v14 or later)  
+2. Ganache (for local blockchain development)  
+3. MetaMask (browser wallet extension)  
+4. Solidity Compiler 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📜 Smart Contract Details  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### CampaignFactory.sol  
+- **Purpose**: Creates and manages individual campaigns.  
+- **Key Functions**:  
+  - `createCampaign(uint minimumContribution)`: Creates a new campaign.  
+  - `getDeployedCampaigns()`: Returns all deployed campaign addresses.  
+
+### Campaign.sol  
+- **Purpose**: Manages contributions and spending requests for a single campaign.  
+- **Key Functions**:  
+  - `contribute()`: Allows users to contribute ETH to the campaign.  
+  - `createRequest(string description, uint value, address recipient)`: Allows the manager to create a spending request.  
+  - `approveRequest(uint index)`: Contributors can approve spending requests.  
+  - `finalizeRequest(uint index)`: Finalizes a request after approval.  
+
+---
+
+## ✨ Highlights  
+- **Decentralized Fundraising**: Eliminates the need for intermediaries.  
+- **Transparency**: All operations are verifiable on-chain.  
+- **Community-Controlled Funds**: Contributors have the power to approve or reject spending.  
+
+---
+
+
+## 📸 Screenshots  
+*(Include screenshots of the UI, key workflows, and examples if applicable.)*  
+
+--- 
+
+Feel free to modify this template to match the specifics of your project!
